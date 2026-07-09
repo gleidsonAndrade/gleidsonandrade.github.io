@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>IA e seus dados: o que é seguro, o que é risco e como se proteger</title>
+    <meta name="description" content="Usar IA com os dados da sua empresa pode ser seguro — ou um problema sério. Entenda o que acontece com cada informação, o que a LGPD exige, o que nunca deve sair da empresa e como se proteger sem travar a produtividade." />
+    <meta name="keywords" content="IA e LGPD, segurança de dados IA, ChatGPT dados empresa, privacidade inteligência artificial, DPA IA, IA on-premise" />
+    <link rel="canonical" href="https://gleidsonandrade.github.io/blog/ia-seguranca-dados-empresa/" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="IA e seus dados: o que é seguro, o que é risco e como se proteger" />
+    <meta property="og:description" content="Usar IA com os dados da sua empresa pode ser seguro — ou um problema sério. Entenda o que acontece com cada informação, o que a LGPD exige, o que nunca deve sair da empresa e como se proteger sem travar a produtividade." />
+    <meta property="og:url" content="https://gleidsonandrade.github.io/blog/ia-seguranca-dados-empresa/" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Space+Grotesk:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://gleidsonandrade.github.io/styles.css" />
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "IA e seus dados: o que é seguro, o que é risco e como se proteger",
+      "description": "Usar IA com os dados da sua empresa pode ser seguro — ou um problema sério. Entenda o que acontece com cada informação, o que a LGPD exige, o que nunca deve sair da empresa e como se proteger sem travar a produtividade.",
+      "inLanguage": "pt-BR",
+      "author": {
+        "@type": "Person",
+        "name": "Gleidson Andrade"
+      },
+      "editor": {
+        "@type": "Person",
+        "name": "Machado"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Gleidson Andrade",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://gleidsonandrade.github.io/logo.svg"
+        }
+      },
+      "about": "Segurança de dados no uso de inteligência artificial em empresas brasileiras",
+      "keywords": "IA e LGPD, segurança de dados IA, ChatGPT dados empresa, privacidade inteligência artificial, DPA IA, IA on-premise",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://gleidsonandrade.github.io/blog/ia-seguranca-dados-empresa/"
+      },
+      "url": "https://gleidsonandrade.github.io/blog/ia-seguranca-dados-empresa/",
+      "datePublished": "2026-07-09",
+      "dateModified": "2026-07-09"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Posso usar o ChatGPT com dados de clientes?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Depende do plano e da natureza do dado. Para dados pessoais identificáveis, verifique se o plano que você usa inclui um contrato de processamento de dados (DPA). Em caso de dúvida, anonimize antes de enviar."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "A IA usa os dados que eu mando para treinar o modelo?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Depende do plano: ChatGPT Free e Plus treinam por padrão (dá para desativar em Configurações → Controles de dados). ChatGPT Business, Enterprise e API não treinam por padrão. Google Workspace Gemini e Microsoft Copilot 365 não usam dados corporativos para treinar. Verifique sempre os termos do plano que você usa."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "O que a LGPD fala sobre IA?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A LGPD não proíbe o uso de IA, mas exige base legal para qualquer tratamento de dados pessoais — incluindo o envio a terceiros. O uso de IA com dados pessoais precisa estar previsto na política de privacidade da empresa."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Existe IA que não compartilha meus dados?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim. Modelos que rodam localmente (on-premise), via Ollama ou LM Studio, não enviam dados para servidores externos. O ChatGPT Enterprise garante por contrato que os dados não são usados para treinamento. E, na API com retenção zero, entradas e saídas nunca são registradas."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Como saber se um fornecedor de IA é seguro?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Verifique: (1) se o fornecedor tem política de privacidade clara e atualizada; (2) se oferece contrato de processamento (DPA) para clientes corporativos; (3) se é certificado por padrões de segurança reconhecidos. Entre as certificações que os grandes fornecedores apresentam estão SOC 2 Type II e ISO/IEC 27001 — OpenAI, Google e Microsoft as possuem. Peça ao fornecedor a documentação atualizada antes de fechar."
+          }
+        }
+      ]
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="https://gleidsonandrade.github.io/">
+        <span class="brand-monogram">GA</span>
+        <span class="brand-name">Gleidson Andrade</span>
+      </a>
+      <p class="brand-tagline">IA que transforma empresa.</p>
+    </header>
+    <main class="article">
+      <article>
+        <p class="eyebrow">Blog · Transformação Digital + LGPD</p>
+        <h1>IA e seus dados: o que é seguro, o que é risco e como se proteger</h1>
+        <p class="byline">Por Gleidson Andrade ·
+          <time datetime="2026-07-09">2026-07-09</time>
+        </p>
+
+        <p><em>Usar inteligência artificial com os dados da sua empresa pode ser seguro — ou pode ser um problema sério. A diferença está em saber o que acontece com cada informação que você manda para uma IA, o que a LGPD exige, o que nunca deve sair da sua empresa e como criar hábitos simples que protegem o seu negócio sem travar a produtividade.</em></p>
+
+        <hr />
+
+        <h2>O contrato colado no ChatGPT</h2>
+
+        <p>Imagine um gestor jurídico com uma tarefa urgente: resumir um contrato de 40 páginas antes da reunião das 14h.</p>
+
+        <p>Sem pensar muito, ele cola o texto inteiro no ChatGPT e pede o resumo. Em dois minutos, tem o que precisava.</p>
+
+        <p>Na reunião, alguém pergunta: <em>"Esse contrato é confidencial, né? Você mandou pra onde?"</em></p>
+
+        <p>Pausa.</p>
+
+        <p>O gestor não sabe responder.</p>
+
+        <p>Esse cenário acontece toda semana em empresas de todos os tamanhos. Não por má-fé — por falta de informação. E a falta de informação, nesse caso, pode custar caro.</p>
+
+        <p>Não é hipótese. Em abril de 2023, engenheiros da Samsung colaram código-fonte proprietário e transcrições de reuniões internas no ChatGPT para acelerar o trabalho. Em menos de 20 dias, três incidentes de vazamento. A Samsung baniu o ChatGPT para todos os funcionários. (Fontes: <a href="https://www.forbes.com/sites/siladityaray/2023/05/02/samsung-bans-chatgpt-and-other-chatbots-for-employees-after-sensitive-code-leak/" target="_blank" rel="noopener">Forbes</a> e <a href="https://www.bloomberg.com/news/articles/2023-05-02/samsung-bans-chatgpt-and-other-generative-ai-use-by-staff-after-leak" target="_blank" rel="noopener">Bloomberg</a>.)</p>
+
+        <hr />
+
+        <h2>O que de fato acontece com seus dados quando você usa uma IA</h2>
+
+        <p>Quando você digita algo em uma ferramenta de IA, o texto vai para um servidor externo para ser processado. Isso é inevitável — a IA precisa "ver" o que você escreveu para responder.</p>
+
+        <p>O que varia é o que acontece <em>depois</em>.</p>
+
+        <p><strong>O dado é usado para treinar o modelo?</strong><br />
+        Depende da ferramenta e do plano:</p>
+
+        <ul>
+          <li><strong>ChatGPT Free / Plus / Pro (planos individuais):</strong> por padrão, sim. O usuário pode desativar em Perfil → Configurações → Controles de dados → "Melhorar o modelo para todos". Depois de desativar, as novas conversas não são usadas para treinar. (Fonte: openai.com/policies.)</li>
+          <li><strong>ChatGPT Business / Enterprise / API:</strong> por padrão, não. A OpenAI declara que não treina modelos com as entradas e saídas dos clientes corporativos. Os dados são criptografados em trânsito e em repouso. (Fonte: openai.com/enterprise-privacy.)</li>
+          <li><strong>Google Workspace com Gemini e Microsoft Copilot 365:</strong> as políticas corporativas garantem que os dados dos clientes não são usados para treinar os modelos. Confirme sempre no contrato do plano específico.</li>
+        </ul>
+
+        <p><strong>O dado fica armazenado? Por quanto tempo?</strong></p>
+
+        <ul>
+          <li><strong>ChatGPT Free / Plus / Pro:</strong> as conversas ficam armazenadas até o usuário apagar; depois de apagadas, são removidas dos sistemas em até 30 dias (exceto quando há retenção por ordem judicial).</li>
+          <li><strong>ChatGPT Enterprise:</strong> o administrador do espaço de trabalho define o período; os dados apagados são removidos em até 30 dias.</li>
+          <li><strong>API da OpenAI:</strong> os dados são retidos por 30 dias e depois apagados automaticamente. Há a opção de <em>Zero Data Retention</em> (retenção zero) para clientes elegíveis — nesse caso, entradas e saídas nunca são registradas.</li>
+        </ul>
+
+        <p>(Fontes: help.openai.com e openai.com/enterprise-privacy.)</p>
+
+        <p><strong>Quem pode acessar esse dado?</strong><br />
+        Funcionários da empresa fornecedora podem acessar conversas para fins de segurança, suporte ou melhoria do serviço, conforme previsto nos termos de uso. As políticas variam — e a maioria das pessoas nunca as leu.</p>
+
+        <p>A boa notícia: as empresas sérias do setor têm políticas claras e contratos de processamento de dados. A má notícia: você precisa ler e entender essas políticas antes de usar, não depois.</p>
+
+        <hr />
+
+        <h2>A diferença entre "plano produto" e "plano API"</h2>
+
+        <p>Existe uma diferença importante que pouca gente conhece:</p>
+
+        <p><strong>Plano produto</strong> (ChatGPT, Gemini, Copilot como produto de usuário): você acessa por uma tela pronta, seus dados passam pela infraestrutura do fornecedor e as políticas de privacidade se aplicam conforme o plano que você contratou.</p>
+
+        <p><strong>Plano API</strong> (integração técnica): sua empresa faz uma integração direta e assina um contrato de processamento de dados — o <em>Data Processing Agreement</em>, ou DPA — com o fornecedor. OpenAI, Anthropic e Google oferecem esse contrato para clientes de API, com garantia por escrito de que os dados não são usados para treinamento, além de regras de segurança e de retenção. (Fonte: openai.com/enterprise-privacy.)</p>
+
+        <p>Para empresas que levam a privacidade a sério, o caminho da API com contrato de processamento oferece garantias mais sólidas.</p>
+
+        <hr />
+
+        <h2>O que a LGPD diz sobre isso</h2>
+
+        <p>A Lei Geral de Proteção de Dados (Lei 13.709/2018) não proíbe o uso de IA. Mas exige que todo tratamento de dados pessoais tenha uma base legal e uma finalidade definida.</p>
+
+        <p>Quando você manda um dado pessoal de cliente, fornecedor ou colaborador para uma ferramenta de IA externa, a sua empresa está transferindo dados para um terceiro — o fornecedor da IA. Isso é um uso compartilhado de dados, e precisa estar previsto na sua política de privacidade, com a devida base legal.</p>
+
+        <p>A ANPD, a autoridade brasileira de proteção de dados, ainda não publicou uma resolução específica sobre o uso de ferramentas de IA por empresas privadas — mas o tema está avançando. A agência publicou o <em>Radar Tecnológico: IA Generativa</em> (novembro de 2024) e mantém em elaboração um guia sobre uso ético de inteligência artificial. (Fonte: gov.br/anpd.)</p>
+
+        <p>O que isso significa na prática:</p>
+
+        <ul>
+          <li>Dados pessoais identificáveis (nome, CPF, e-mail, dados financeiros) <strong>não devem ser enviados para ferramentas de IA sem um contrato adequado com o fornecedor</strong>.</li>
+          <li>Dados anonimizados ou genéricos têm menos restrições.</li>
+          <li>Contratos sensíveis, informações estratégicas e segredos comerciais não são "dados pessoais" — mas são confidenciais por outras razões (sigilo profissional, cláusulas de contrato).</li>
+        </ul>
+
+        <hr />
+
+        <h2>O que é seguro fazer, o que é arriscado, o que nunca fazer</h2>
+
+        <h3>✅ Seguro</h3>
+
+        <ul>
+          <li>Usar IA para rascunhar textos a partir de briefings internos, sem dados pessoais identificáveis.</li>
+          <li>Pedir para a IA resumir documentos públicos, notícias ou materiais de mercado.</li>
+          <li>Usar IA para analisar dados agregados e anonimizados (relatórios de vendas sem identificar clientes).</li>
+          <li>Fazer perguntas conceituais: "como funciona X?", "quais são as melhores práticas para Y?".</li>
+          <li>Usar ferramentas corporativas (Copilot 365, Gemini for Workspace) dentro do ambiente da empresa, com contrato de dados ativo.</li>
+        </ul>
+
+        <h3>⚠️ Arriscado (avalie antes)</h3>
+
+        <ul>
+          <li>Colar propostas comerciais com nome de clientes e valores.</li>
+          <li>Enviar e-mails de negociação que identificam as partes.</li>
+          <li>Usar IA para analisar dados de RH (salário, desempenho, avaliações de colaboradores).</li>
+          <li>Enviar documentos financeiros com informações de terceiros.</li>
+        </ul>
+
+        <p>Nesses casos: verifique a política do plano que você usa, considere anonimizar antes de enviar e consulte o responsável pelo compliance da empresa se a informação for sensível.</p>
+
+        <h3>❌ Nunca fazer</h3>
+
+        <ul>
+          <li>Colar contratos com dados pessoais de clientes em ferramentas sem contrato de processamento ativo.</li>
+          <li>Enviar dados de saúde (laudos, prontuários) para qualquer IA pública.</li>
+          <li>Compartilhar credenciais, senhas ou tokens de acesso em prompts de IA.</li>
+          <li>Usar IA para processar dados de crianças e adolescentes sem verificar os requisitos legais específicos.</li>
+          <li>Tratar informações com cláusula de sigilo explícita como se fossem dados comuns.</li>
+        </ul>
+
+        <hr />
+
+        <h2>Checklist: como usar IA com dados sem exposição desnecessária</h2>
+
+        <p>Antes de mandar qualquer informação para uma ferramenta de IA, passe por este checklist:</p>
+
+        <ul>
+          <li><strong>O dado é público ou genérico?</strong> → Pode usar sem restrição adicional.</li>
+          <li><strong>O dado identifica uma pessoa?</strong> → Verifique a política de privacidade do plano. Considere anonimizar.</li>
+          <li><strong>O dado é coberto por sigilo contratual?</strong> → Não envie sem verificar os termos do contrato.</li>
+          <li><strong>A empresa tem contrato de processamento (DPA) com o fornecedor?</strong> → Se sim, verifique o escopo. Se não, use somente dados não sensíveis.</li>
+          <li><strong>A ferramenta que você usa tem política de não usar dados para treinar modelos?</strong> → ChatGPT Free/Plus: treina por padrão (dá para desativar). ChatGPT Business/Enterprise/API: não treina por padrão. Google Workspace Gemini e Microsoft Copilot 365: não usam dados corporativos para treinar.</li>
+        </ul>
+
+        <p>Cinco perguntas. Trinta segundos. Evitam um problema que pode levar meses para resolver.</p>
+
+        <hr />
+
+        <h2>O que muda nos próximos anos</h2>
+
+        <p>O mercado está respondendo à demanda por privacidade:</p>
+
+        <p><strong>IA que roda na própria empresa (on-premise):</strong> modelos que ficam nos servidores da empresa, sem enviar dados para nuvens externas. Hoje já é acessível para empresas menores: ferramentas como o <strong>Ollama</strong> e o <strong>LM Studio</strong> permitem rodar modelos abertos (como Llama, Mistral e Gemma) em um servidor local com placa de vídeo razoável, o suficiente para usos internos de pequeno volume. O custo é de instalação, uma vez só, sem cobrança por uso.</p>
+
+        <p><strong>Contratos de dados mais simples:</strong> os fornecedores de IA corporativa estão simplificando os contratos de processamento para empresas médias. O que antes exigia negociação jurídica está virando autoatendimento.</p>
+
+        <p><strong>Regulação crescente:</strong> a ANPD, no Brasil, e os reguladores europeus estão desenvolvendo orientações específicas para o uso de IA. Empresas brasileiras que usam fornecedores europeus ou que atendem usuários na Europa podem ser afetadas por essas regras, especialmente em sistemas considerados de alto risco.</p>
+
+        <p>A tendência é que a privacidade vire diferencial — não obrigação. As empresas que tratam dados com critério hoje constroem vantagem competitiva amanhã.</p>
+
+        <hr />
+
+        <h2>Segurança não é paranoia — é critério</h2>
+
+        <p>A IA não é inimiga dos dados da sua empresa. É uma ferramenta poderosa com regras de uso — como qualquer outra.</p>
+
+        <p>A empresa que usa IA com critério não perde velocidade. Ela ganha algo mais valioso: confiança. Dos clientes, dos colaboradores, dos parceiros.</p>
+
+        <p>E confiança, no longo prazo, é o ativo mais difícil de construir e o mais fácil de destruir.</p>
+
+        <hr />
+
+        <h2>Perguntas frequentes</h2>
+
+        <p><strong>Posso usar o ChatGPT com dados de clientes?</strong><br />
+        Depende do plano e da natureza do dado. Para dados pessoais identificáveis, verifique se o plano que você usa inclui um contrato de processamento de dados (DPA). Em caso de dúvida, anonimize antes de enviar.</p>
+
+        <p><strong>A IA usa os dados que eu mando para treinar o modelo?</strong><br />
+        Depende do plano: ChatGPT Free e Plus treinam por padrão (dá para desativar em Configurações → Controles de dados). ChatGPT Business, Enterprise e API não treinam por padrão. Google Workspace Gemini e Microsoft Copilot 365 não usam dados corporativos para treinar. Verifique sempre os termos do plano que você usa.</p>
+
+        <p><strong>O que a LGPD fala sobre IA?</strong><br />
+        A LGPD não proíbe o uso de IA, mas exige base legal para qualquer tratamento de dados pessoais — incluindo o envio a terceiros. O uso de IA com dados pessoais precisa estar previsto na política de privacidade da empresa.</p>
+
+        <p><strong>Existe IA que não compartilha meus dados?</strong><br />
+        Sim. Modelos que rodam localmente (on-premise), via Ollama ou LM Studio, não enviam dados para servidores externos. O ChatGPT Enterprise garante por contrato que os dados não são usados para treinamento. E, na API com retenção zero, entradas e saídas nunca são registradas.</p>
+
+        <p><strong>Como saber se um fornecedor de IA é seguro?</strong><br />
+        Verifique: (1) se o fornecedor tem política de privacidade clara e atualizada; (2) se oferece contrato de processamento (DPA) para clientes corporativos; (3) se é certificado por padrões de segurança reconhecidos. Entre as certificações que os grandes fornecedores apresentam estão SOC 2 Type II e ISO/IEC 27001 — OpenAI, Google e Microsoft as possuem. Peça ao fornecedor a documentação atualizada antes de fechar.</p>
+
+        <aside class="related">
+          <p>Leia também:</p>
+          <a class="related-link" href="https://gleidsonandrade.github.io/blog/o-que-e-ia-aplicada-a-negocios/">O que é IA aplicada a negócios e por onde uma empresa média começa</a>
+          <a class="related-link" href="https://gleidsonandrade.github.io/blog/qual-ia-usar-chatgpt-gemini-claude/">ChatGPT, Gemini, Claude: qual IA usar na sua empresa e para quê</a>
+          <a class="related-link" href="https://gleidsonandrade.github.io/blog/quanto-custa-ia-na-empresa/">Quanto custa colocar IA na sua empresa (sem cair em armadilhas)</a>
+        </aside>
+      </article>
+    </main>
+    <footer class="site-footer">
+      <p>© Gleidson Andrade — IA que transforma empresa.</p>
+      <p class="handle">@gleidson.andrad</p>
+    </footer>
+  </body>
+</html>
